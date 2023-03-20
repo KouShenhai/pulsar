@@ -98,6 +98,7 @@ public class PulsarResources {
     public static MetadataStoreExtended createConfigMetadataStore(String serverUrls, int sessionTimeoutMs,
                                                                   boolean allowReadOnlyOperations)
             throws MetadataStoreException {
+
         return MetadataStoreExtended.create(serverUrls, MetadataStoreConfig.builder()
                 .sessionTimeoutMillis(sessionTimeoutMs).allowReadOnlyOperations(allowReadOnlyOperations).build());
     }
